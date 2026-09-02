@@ -42,7 +42,7 @@ public class HomePage {
 	@FindBy(xpath="//li[@id='feds-menu-wrapper']/ancestor::header[@class='global-navigation']//li//a[text()='Plans']")
 	WebElement PlanPricingButton;
 	
-	@FindBy(xpath="")
+	@FindBy(xpath="//footer[@class='global-footer' and @data-block-status='loaded']")
 	WebElement footer;
 	
 	
