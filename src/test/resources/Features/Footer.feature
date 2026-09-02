@@ -10,6 +10,7 @@ Feature: Adobe Footer Navigation
   Scenario: Verify Privacy Policy link
     When User clicks Privacy Policy
     Then Privacy Policy page should open
+    
 
   Scenario: Verify Terms Of Use link
     When User clicks Terms Of Use

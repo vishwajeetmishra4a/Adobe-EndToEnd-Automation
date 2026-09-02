@@ -10,6 +10,7 @@ Feature: Adobe Plans And Pricing
   Scenario: Navigate to Plans and Pricing page
     When User clicks Plans and Pricing
     Then Plans page should be displayed
+    
 
   Scenario: Verify Individual plans section
     Given User is on Plans page
