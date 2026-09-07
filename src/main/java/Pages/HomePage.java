@@ -30,6 +30,9 @@ public class HomePage {
 	@FindBy(xpath="//h3[text()='This Adobe site does not match your location.']/ancestor::div[@class='dialog-modal region-modal']//button")
 	WebElement RemovingPopUp;
 	
+	@FindBy(xpath="//div[@class='router-marquee']")
+	WebElement HeroSection;
+	
 	@FindBy(xpath="//div[@class='feds-backdrop']/ancestor::header[@class='global-navigation']//div[@class='feds-brand-container feds-dark-bg']//span[@class='feds-brand-image desktop-brand']")
 	WebElement Logo;
 	
@@ -45,7 +48,87 @@ public class HomePage {
 	@FindBy(xpath="//footer[@class='global-footer' and @data-block-status='loaded']")
 	WebElement footer;
 	
+	public void closeLocationPopup() {
+		
+		try {
+			wait.until(ExpectedConditions.visibilityOf(RemovingPopUp));
+			RemovingPopUp.click();
+			
+			System.out.println("HomePage pop up closed Successfully.");
+		}
+		catch(TimeoutException e) {
+			System.out.print("Location pop up wasn't displayed.");
+		}
+		catch(Exception e) {
+			System.out.println("Unable to close popUp.");
+			e.printStackTrace();
+		}
+	}
 	
 	
+	public boolean isHomePageVisible() {
+		try {
+			return wait.until(ExpectedConditions.visibilityOf(HeroSection)).isDisplayed();
+		}
+		catch(Exception e) {
+			System.out.println("Home Page isn't visible");
+			return false;
+		}
+		
+	}
+	
+	
+	public boolean isLogoDisplayed() {
+		
+		try {
+			return wait.until(ExpectedConditions.visibilityOf(Logo)).isDisplayed();
+		}
+		catch(Exception e) {
+			System.out.println("Logo isn't visible");
+			return false;
+		}
+		
+	}
+	
+	public boolean isNavigationMenuDisplayed() {
+		try {
+			return wait.until(ExpectedConditions.visibilityOf(NavigationMenu)).isDisplayed();
+		}
+		catch(Exception e) {
+			System.out.println("Navigation Menu isn't displayed");
+			return false;
+		}
+	}
+	
+	public boolean isSignInOptionDisplayed() {
+		try {
+			return wait.until(ExpectedConditions.visibilityOf(SignInButton)).isDisplayed();
+		}
+		catch(Exception e) {
+			System.out.println("Sign-In option isn't Displayed");
+			return false;
+		}
+	}
+	
+	public boolean isPlanAndPricingDisplayed() {
+		try {
+			return wait.until(ExpectedConditions.visibilityOf(PlanPricingButton)).isDisplayed();
+		}
+		catch(Exception e) {
+			System.out.println("Plan and Pricing not Visible");
+			return false;
+		}
+	}
+	
+	public boolean isFooterDisplayed() {
+		try {
+			return wait.until(ExpectedConditions.visibilityOf(footer)).isDisplayed();
+		}
+		catch(Exception e) {
+			System.out.println("Footer isn't displayed");
+			return false;
+		}
+	}
+		
 	
 }
