@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 07 20:01:51 IST 2026</td>
+<td>Started on:</td><td>Fri Sep 11 20:09:03 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (121 ms)</td>
+<tr><td>Total time:</td><td>296 seconds (296461 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,18 +76,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestRunner.setUpClass()'><b>setUpClass</b><br>Test class: Runner.TestRunner<br>Parameters: org.testng.TestRunner@75d3a5e0</td>
-<td><div><pre>java.lang.IllegalAccessError: class io.cucumber.testng.TestNGCucumberRunner tried to access method &apos;io.cucumber.core.eventbus.UuidGenerator io.cucumber.core.runtime.UuidGeneratorServiceLoader.loadUuidGenerator()&apos; (io.cucumber.testng.TestNGCucumberRunner and io.cucumber.core.runtime.UuidGeneratorServiceLoader are in unnamed module of loader &apos;app&apos;)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:105)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+<td title='Runner.HomePageRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.HomePageRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Adobe homepage loads successfully", "Adobe Homepage"</td>
+<td><div><pre>io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in StepDefinitions.LoginSteps.user_clicks_continue_with_empty_email() and StepDefinitions.LoginSteps.user_clicks_continue_with_invalid_passowrd()
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:313)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:307)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:744)
 	at org.testng.TestRunner.run(TestRunner.java:616)
@@ -104,18 +114,28 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1292040526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1292040526'><pre>java.lang.IllegalAccessError: class io.cucumber.testng.TestNGCucumberRunner tried to access method &apos;io.cucumber.core.eventbus.UuidGenerator io.cucumber.core.runtime.UuidGeneratorServiceLoader.loadUuidGenerator()&apos; (io.cucumber.testng.TestNGCucumberRunner and io.cucumber.core.runtime.UuidGeneratorServiceLoader are in unnamed module of loader &apos;app&apos;)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:105)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+</pre></div><a href='#' onClick='toggleBox("stack-trace596333086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596333086'><pre>io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in StepDefinitions.LoginSteps.user_clicks_continue_with_empty_email() and StepDefinitions.LoginSteps.user_clicks_continue_with_invalid_passowrd()
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:313)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:307)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:744)
 	at org.testng.TestRunner.run(TestRunner.java:616)
@@ -134,7 +154,41 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>Runner.TestRunner@385e9564</td></tr>
+<td>Runner.HomePageRunner@6a2f6f80</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.HomePageRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.HomePageRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Plans and Pricing option is available", "Adobe Homepage"</td>
+<td></td>
+<td>61</td>
+<td>Runner.HomePageRunner@6a2f6f80</td></tr>
+<tr>
+<td title='Runner.HomePageRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.HomePageRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify global navigation menu is displayed", "Adobe Homepage"</td>
+<td></td>
+<td>20</td>
+<td>Runner.HomePageRunner@6a2f6f80</td></tr>
+<tr>
+<td title='Runner.HomePageRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.HomePageRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Adobe logo is displayed", "Adobe Homepage"</td>
+<td></td>
+<td>68</td>
+<td>Runner.HomePageRunner@6a2f6f80</td></tr>
+<tr>
+<td title='Runner.HomePageRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.HomePageRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify footer section is displayed", "Adobe Homepage"</td>
+<td></td>
+<td>49</td>
+<td>Runner.HomePageRunner@6a2f6f80</td></tr>
+<tr>
+<td title='Runner.HomePageRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.HomePageRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Sign In option is available", "Adobe Homepage"</td>
+<td></td>
+<td>95</td>
+<td>Runner.HomePageRunner@6a2f6f80</td></tr>
 </table><p>
 </body>
 </html>

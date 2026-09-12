@@ -3,8 +3,10 @@
 <suite name="Adobe suite" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="AdobeMain test" verbose="2">
     <classes>
-      <class name="runner.TestRunner"/>
+      <class name="Runner.TestRunner"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
+
+            
             
